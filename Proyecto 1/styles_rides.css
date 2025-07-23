@@ -1,0 +1,402 @@
+:root {
+  /* ===== Global Theme Variables ===== */
+
+  /* Colors */
+  --color-primary: #3498db;
+  --color-primary-dark: #2980b9;
+  --color-accent: #1d6fa5;
+  --color-border: #ccc;
+  --color-heading: #000;
+  --color-subtitle: #505050;
+  --color-muted: #444;
+  --color-separator: #ddd;
+  --color-line: #0f0f0f;
+  --color-bg-light: #fafafa;
+  --color-white: #fff;
+  --color-footer: #777;
+
+  /* Fonts */
+  --font-main: 'Segoe UI', sans-serif;
+  --font-heading: 'Oswald', Arial, sans-serif;
+
+  /* Layout */
+  --radius-small: 4px;
+  --radius-medium: 6px;
+  --padding-button: 10px 30px;
+  --max-width-content: 900px;
+}
+
+/* === Base Page Styles === */
+body {
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 20px;
+  color: var(--color-muted);
+  background-color: var(--color-bg-light);
+}
+
+/* === Header and Title === */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 85px;
+  height: auto;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  color: var(--color-heading);
+  padding: 10px 20px;
+  margin: 0;
+}
+
+/* === Section Subtitle === */
+h2 {
+  color: var(--color-subtitle);
+  margin-bottom: 20px;
+  font-family: var(--font-heading);
+  font-weight: 300;
+  text-align: center;
+  padding-bottom: 5px;
+  margin: 0 auto;
+  width: fit-content;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  margin: 3px auto 0;
+  width: 200%;
+  max-width: 120%;
+  height: 0.2px;
+  background: var(--color-line);
+  border-radius: 1px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+/* === Navigation Bar === */
+.menu-container {
+  width: 100%;
+  padding: 10px 0;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.left-menu {
+  display: flex;
+  gap: 30px;
+}
+
+.left-menu a {
+  color: var(--color-heading);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background 0.2s;
+}
+
+.left-menu a:hover {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border-radius: var(--radius-small);
+}
+
+.left-menu a.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 1px;
+}
+
+/* === Search Bar and User Menu === */
+.center-search {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 20px;
+}
+
+.search-bar {
+  padding: 8px 12px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  font-size: 14px;
+}
+
+.right-menu {
+  display: flex;
+  align-items: center;
+}
+
+.user-btn {
+  cursor: pointer;
+  position: relative;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-menu a {
+  color: var(--color-text);
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1f1f1;
+}
+
+.user-btn:hover .dropdown-menu {
+  display: block;
+}
+
+/* === Horizontal Divider === */
+hr {
+  border: 0;
+  height: 1px;
+  background-color: var(--color-separator);
+  margin: 20px 0;
+}
+
+/* === "New Ride" Button Container === */
+.button-container {
+  max-width: var(--max-width-content);
+  margin: 0 auto 10px auto;
+  text-align: right;
+  padding: 0 10px;
+}
+
+.new-ride {
+  display: inline-block;
+  padding: var(--padding-button);
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-accent);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: var(--radius-small);
+  font-weight: bold;
+}
+
+.new-ride:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* === Table Styles === */
+table {
+  width: 100%;
+  max-width: var(--max-width-content);
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-medium);
+  font-size: 15px;
+}
+
+thead {
+  background-color: #f5f5f5;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+th, td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+  font-weight: bold;
+  color: var(--color-muted);
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.actions a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 12px;
+  transition: color 0.2s;
+}
+
+.actions a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* === Ride Form Section === */
+.ride-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: var(--color-white);
+  padding: 20px;
+  border-radius: var(--radius-medium);
+  box-shadow: 0 2px 6px rgba(8, 8, 8, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ride-form .row {
+  display: flex;
+  gap: 15px;
+}
+
+.ride-form .field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ride-form label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.ride-form input,
+.ride-form select {
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+}
+
+/* === Days Checkboxes === */
+.days-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === Ride Time and Seats Fields === */
+.details_field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 100px;
+  gap: 1px;
+  margin-right: 147px;
+}
+
+/* === Vehicle Details Section === */
+.vehicle-details {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  padding: 10px;
+}
+
+.vehicle-details legend {
+  font-weight: bold;
+}
+
+/* === Form Action Buttons === */
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+.cancel-btn {
+  background: none;
+  color: var(--color-primary);
+  text-decoration: none;
+  border-radius: var(--radius-small);
+  margin-right: auto;
+}
+
+.cancel-btn:hover {
+  text-decoration: underline;
+}
+
+.next-btn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-small);
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.next-btn:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* === Profile Picture Section === */
+.profile-section {
+  width: 100%;
+  margin: 10px 0;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* === Footer === */
+footer {
+  margin-top: 40px;
+  font-size: 12px;
+  color: var(--color-footer);
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: var(--color-white);
+  padding: 10px 0;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+}
+
+footer nav a {
+  color: var(--color-footer);
+  text-decoration: none;
+  margin: 0 5px;
+}
