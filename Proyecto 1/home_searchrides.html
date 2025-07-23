@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Rides - AVENTONES</title>
+    <link rel="stylesheet" href="styles_home.css">
+</head>
+
+<body>
+    <!-- Header with logo and site title -->
+    <div class="header">
+        <img src="Images/Icono.png" alt="Logo" class="logo">
+        <h1 class="title">AVENTONES</h1>
+    </div>
+
+    <!-- Top navigation menu with left links, center search, and right user menu -->
+    <div class="menu-container">
+        <div class="menu">
+            
+            <!-- Left-side navigation -->
+            <nav class="left-menu">
+                <a class="active" href="#">Home</a>
+                <a href="myrides.html">Rides</a>
+                <a href="bookings.html">Bookings</a>
+            </nav>
+
+            <!-- Centered search input -->
+            <div class="center-search">
+                <input type="text" placeholder="Search..." class="search-bar">
+            </div>
+
+            <!-- Right-side user icon with dropdown options -->
+            <div class="right-menu">
+                <div class="user-btn">
+                    <img src="Images/avatar.png" alt="User" class="user-icon">
+                    <div class="dropdown-menu">
+                        <a href="index.html">Logout</a>
+                        <a href="home_editprofile.html">Profile</a>
+                        <a href="home_configuration.html">Settings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Page heading -->
+    <h2>Search Rides</h2>
+
+    <!-- Filter form for searching rides -->
+    <div class="filter-box">
+        <form action="#" method="get" class="filter-form">
+
+            <!-- Origin, destination, and submit button -->
+            <div class="filter-row">
+                <label for="from">From</label>
+                <select id="from" name="from">
+                    <option>Quesada</option>
+                    <option>San José</option>
+                    <option>Heredia</option>
+                </select>
+
+                <label for="to">To</label>
+                <select id="to" name="to">
+                    <option>Zarcero</option>
+                    <option>Alajuela</option>
+                    <option>Cartago</option>
+                </select>
+
+                <button type="submit" class="find-btn">Find rides</button>
+            </div>
+
+            <!-- Days of the week checkboxes -->
+            <div class="filter-days">
+                <label>Days</label>
+                <label><input type="checkbox" name="days" checked> Mon</label>
+                <label><input type="checkbox" name="days" checked> Tue</label>
+                <label><input type="checkbox" name="days" checked> Wed</label>
+                <label><input type="checkbox" name="days" checked> Thu</label>
+                <label><input type="checkbox" name="days"> Fri</label>
+                <label><input type="checkbox" name="days" checked> Sat</label>
+                <label><input type="checkbox" name="days"> Sun</label>
+            </div>
+        </form>
+    </div>
+
+    <!-- Search results table -->
+    <div class="results">
+        <p>Rides found from <strong><em>Quesada</em></strong> to <strong><em>Zarcero</em></strong></p>
+
+        <table class="rides-table">
+            <thead>
+                <tr>
+                    <th>Driver</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Seats</th>
+                    <th>Car</th>
+                    <th>Fee</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ride result 1 -->
+                <tr>
+                    <td><img src="Images/avatar.png" alt="avatar" class="avatar"> juanda_gomez04</td>
+                    <td><a href="#">Quesada</a></td>
+                    <td>Alajuela</td>
+                    <td>2</td>
+                    <td>Ford Mustang EcoBoost 2021</td>
+                    <td>$15</td>
+                    <td><a href="#">Request</a></td>
+                </tr>
+
+                <!-- Ride result 2 -->
+                <tr>
+                    <td><img src="Images/avatar.png" alt="avatar" class="avatar"> barroyo</td>
+                    <td><a href="#">Quesada</a></td>
+                    <td>Naranjo</td>
+                    <td>1</td>
+                    <td>Mazda MX-5 Miata 2020</td>
+                    <td>$10</td>
+                    <td><a href="#">Request</a></td>
+                </tr>
+
+                <!-- Ride result 3 -->
+                <tr>
+                    <td><img src="Images/avatar.png" alt="avatar" class="avatar"> juanito24</td>
+                    <td><a href="#">Aguas Zarcas</a></td>
+                    <td>Naranjo</td>
+                    <td>1</td>
+                    <td>Hyundai Veloster Turbo 2022</td>
+                    <td>$20</td>
+                    <td><a href="#">Request</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Static map image preview -->
+    <div class="map-placeholder">
+        <img src="Images/ruta.png" alt="Map preview" style="width: 100%; max-width: 700px;">
+    </div>
+
+    <!-- Footer with navigation links -->
+    <footer>
+        <hr>
+        <nav>
+            <a href="home_searchrides.html">Home</a> |
+            <a href="myrides.html">Rides</a> |
+            <a href="bookings.html">Bookings</a> |
+            <a href="home_configuration.html">Settings</a> |
+            <a href="index.html">Login</a> |
+            <a href="register.html">Register</a>
+        </nav>
+        <p>&copy; Aventones.com</p>
+    </footer>
+</body>
+
+
+</html>
