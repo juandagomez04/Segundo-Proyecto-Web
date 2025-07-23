@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Usuarios - Aventones</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Main container for the registration form and content -->
+  <div class="container">
+
+    <!-- Header section with logo and title -->
+    <div class="header">
+      <img src="Images/Icono.png" alt="Logo" class="logo">
+      <h1 class="title">AVENTONES</h1>
+    </div>
+
+    <!-- Subtitle for the registration form -->
+    <h2 class="subtitle">User Registration</h2>
+
+    <!-- Registration form -->
+    <form class="form" action="index.html" method="get">
+      <div class="row">
+        <!-- First Name field -->
+        <div class="field">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="fname" required>
+        </div>
+        <!-- Last Name field -->
+        <div class="field">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lname" required>
+        </div>
+      </div>
+
+      <!-- Email field -->
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="row">
+        <!-- Password field -->
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <!-- Repeat Password field -->
+        <div class="field">
+          <label for="repeat">Repeat Password</label>
+          <input type="password" id="repeat" name="repeat" required>
+        </div>
+      </div>
+
+      <!-- Address field -->
+      <div class="field">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+
+      <div class="row">
+        <!-- Country selection -->
+        <div class="field">
+          <label for="country">Country</label>
+          <select id="country" name="country" required>
+            <option value="">Select Country</option>
+            <option value="CR">Costa Rica</option>
+            <option value="MX">México</option>
+          </select>
+        </div>
+        <!-- State field -->
+        <div class="field">
+          <label for="state">State</label>
+          <input type="text" id="state" name="state" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- City field -->
+        <div class="field">
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" required>
+        </div>
+        <!-- Phone Number field -->
+        <div class="field">
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" name="phone" required>
+        </div>
+      </div>
+
+      <!-- Links for login and driver registration -->
+      <div class="links">
+        <p class="login-link">Already an user? <a href="index.html">Login here</a></p>
+        <p class="register-driver-link">Register as driver?<a href="register_drivers.html">Click here</a></p>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" class="submit-btn">Sign up</button>
+    </form>
+
+    <!-- Footer with navigation links -->
+    <footer>
+      <hr>
+      <nav>
+        <a href="home_searchrides.html">Home</a> |
+        <a href="myrides.html">Rides</a> |
+        <a href="bookings.html">Bookings</a> |
+        <a href="home_configuration.html">Settings</a> |
+        <a href="index.html">Login</a> |
+        <a href="register.html">Register</a>
+      </nav>
+      <p>&copy; Aventones.com</p>
+    </footer>
+  </div>
+</body>
+
+</html>
