@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings - AVENTONES</title>
+    <link rel="stylesheet" href="styles_bookings.css">
+</head>
+
+<body>
+    <!-- Header with logo and system name -->
+    <div class="header">
+        <img src="Images/Icono.png" alt="Logo" class="logo">
+        <h1 class="title">AVENTONES</h1>
+    </div>
+
+    <!-- Navigation bar -->
+    <div class="menu-container">
+        <div class="menu">
+            <!-- Left menu links -->
+            <nav class="left-menu">
+                <a href="home_searchrides.html">Home</a>
+                <a href="myrides.html">Rides</a>
+                <a class="active" href="#">Bookings</a>
+            </nav>
+
+            <!-- Centered search bar -->
+            <div class="center-search">
+                <input type="text" placeholder="Search..." class="search-bar">
+            </div>
+
+            <!-- Right user menu with dropdown -->
+            <div class="right-menu">
+                <div class="user-btn">
+                    <img src="Images/avatar.png" alt="User" class="user-icon">
+                    <div class="dropdown-menu">
+                        <a href="index.html">Logout</a>
+                        <a href="home_configuration.html">Settings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Page title -->
+    <h2>Bookings</h2>
+
+    <!-- Booking requests table -->
+    <div class="bookings-container">
+        <table class="bookings-table">
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Ride</th>
+                    <th>Accept / Reject</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Booking 1 -->
+                <tr>
+                    <td>
+                        <img src="Images/avatar.png" alt="avatar" class="avatar">
+                        <strong>Juanito</strong>
+                    </td>
+                    <td>Ciudad Quesada - Naranjo</td>
+                    <td><a href="#">Accept</a> | <a href="#">Reject</a></td>
+                </tr>
+
+                <!-- Booking 2 -->
+                <tr>
+                    <td>
+                        <img src="Images/avatar.png" alt="avatar" class="avatar">
+                        <strong>Menganito</strong>
+                    </td>
+                    <td>Fortuna - San José</td>
+                    <td><a href="#">Accept</a> | <a href="#">Reject</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer with navigation links -->
+    <footer>
+        <hr>
+        <nav>
+            <a href="home_searchrides.html">Home</a> |
+            <a href="myrides.html">Rides</a> |
+            <a href="bookings.html">Bookings</a> |
+            <a href="home_configuration.html">Settings</a> |
+            <a href="index.html">Login</a> |
+            <a href="register.html">Register</a>
+        </nav>
+        <p>&copy; Aventones.com</p>
+    </footer>
+</body>
+
+
+</html>
