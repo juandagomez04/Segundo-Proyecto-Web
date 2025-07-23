@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration - AVENTONES</title>
+    <link rel="stylesheet" href="styles_home.css">
+</head>
+
+<body>
+    <!-- Header with logo and title -->
+    <div class="header">
+        <img src="Images/Icono.png" alt="Logo" class="logo">
+        <h1 class="title">AVENTONES</h1>
+    </div>
+
+    <!-- Navigation bar -->
+    <div class="menu-container">
+        <div class="menu">
+            
+            <!-- Left navigation links -->
+            <nav class="left-menu">
+                <a class="active" href="home_searchrides.html">Home</a>
+                <a href="myrides.html">Rides</a>
+                <a href="bookings.html">Bookings</a>
+            </nav>
+
+            <!-- Center search input -->
+            <div class="center-search">
+                <input type="text" placeholder="Search..." class="search-bar">
+            </div>
+
+            <!-- Right-side user menu -->
+            <div class="right-menu">
+                <div class="user-btn">
+                    <img src="Images/avatar.png" alt="User" class="user-icon">
+                    <div class="dropdown-menu">
+                        <a href="index.html">Logout</a>
+                        <a href="home_editprofile.html">Profile</a>
+                        <a href="home_configuration.html">Settings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Page heading -->
+    <h2>Configuration</h2>
+
+    <!-- Configuration form: public name and bio -->
+    <form class="form" action="home_searchrides.html" method="get">
+
+        <!-- Public display name -->
+        <div class="row">
+            <div class="field">
+                <label for="fname">Public Name</label>
+                <input type="text" id="fname" name="fname" value="Juanda" required>
+            </div>
+        </div>
+
+        <!-- Public biography text area -->
+        <div class="field">
+            <label for="bio">Public Bio</label>
+            <textarea id="bio" name="bio" rows="5" placeholder="Tell us about yourself..."></textarea>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="form-actions">
+            <a href="home_searchrides.html" class="cancel-link">Cancel</a>
+            <button type="submit" class="submit-btn">Save</button>
+        </div>
+    </form>
+
+    <!-- Footer with navigation links -->
+    <footer>
+        <hr>
+        <nav>
+            <a href="home_searchrides.html">Home</a> |
+            <a href="myrides.html">Rides</a> |
+            <a href="bookings.html">Bookings</a> |
+            <a href="home_configuration.html">Settings</a> |
+            <a href="index.html">Login</a> |
+            <a href="register.html">Register</a>
+        </nav>
+        <p>&copy; Aventones.com</p>
+    </footer>
+</body>
+
+
+</html>
