@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride Details - AVENTONES</title>
+    <link rel="stylesheet" href="styles_rides.css">
+
+</head>
+
+<body>
+    <!-- Header with logo and title -->
+    <div class="header">
+        <img src="Images/Icono.png" alt="Logo" class="logo">
+        <h1 class="title">AVENTONES</h1>
+    </div>
+
+    <!-- Top navigation menu -->
+    <div class="menu-container">
+        <div class="menu">
+            <!-- Left-side navigation links -->
+            <nav class="left-menu">
+                <a href="home_searchrides.html">Home</a>
+                <a class="active" href="#">Rides</a>
+                <a href="bookings.html">Bookings</a>
+            </nav>
+
+            <!-- Center search bar -->
+            <div class="center-search">
+                <input type="text" placeholder="Search..." class="search-bar">
+            </div>
+
+            <!-- Right-side user dropdown -->
+            <div class="right-menu">
+                <div class="user-btn">
+                    <img src="Images/avatar.png" alt="User" class="user-icon">
+                    <div class="dropdown-menu">
+                        <a href="index.html">Logout</a>
+                        <a href="home_configuration.html">Settings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Page subtitle -->
+    <h2>Ride Details</h2>
+
+    <!-- Profile information -->
+    <div class="profile-section">
+        <img src="Images/avatar.png" alt="Profile Picture" class="profile-pic">
+        <p>juanda_gomez04</p>
+    </div>
+
+    <!-- Ride detail form (read-only style) -->
+    <form class="ride-form" action="myrides.html" method="get">
+
+        <!-- Departure and arrival information -->
+        <div class="row">
+            <div class="field">
+                <label for="departure">Departure from</label>
+                <input type="text" id="departure" value="Quesada" required>
+            </div>
+            <div class="field">
+                <label for="arrival">Arrive To</label>
+                <input type="text" id="arrival" value="Zarcero" required>
+            </div>
+        </div>
+
+        <!-- Selected days -->
+        <div class="field days">
+            <label>Days</label>
+            <div class="days-checkboxes">
+                <label><input type="checkbox" checked> Mon</label>
+                <label><input type="checkbox" checked> Tue</label>
+                <label><input type="checkbox" checked> Wed</label>
+                <label><input type="checkbox" checked> Thu</label>
+                <label><input type="checkbox" checked> Fri</label>
+                <label><input type="checkbox" checked> Sat</label>
+                <label><input type="checkbox" checked> Sun</label>
+            </div>
+        </div>
+
+        <!-- Time, available seats, and fee -->
+        <div class="row">
+            <div class="details_field">
+                <label for="time">Time</label>
+                <select id="time">
+                    <option selected>10:00 am</option>
+                </select>
+            </div>
+            <div class="details_field">
+                <label for="seats">Seats</label>
+                <input type="number" id="seats" value="2" min="1" max="10">
+            </div>
+            <div class="details_field">
+                <label for="fee">Fee</label>
+                <input type="number" id="fee" value="15" min="0">
+            </div>
+        </div>
+
+        <!-- Vehicle information section -->
+        <fieldset class="vehicle-details">
+            <legend>Vehicle Details</legend>
+            <div class="row">
+                <div class="field">
+                    <label for="make">Make</label>
+                    <select id="make">
+                        <option selected>Nissan</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="model">Model</label>
+                    <input type="text" id="model" value="March">
+                </div>
+                <div class="field">
+                    <label for="year">Year</label>
+                    <input type="number" id="year" value="2020">
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Action buttons -->
+        <div class="buttons">
+            <a href="myrides.html" class="cancel-btn">Cancel</a>
+            <button type="submit" class="next-btn">Request</button>
+        </div>
+    </form>
+
+    <!-- Footer with navigation links -->
+    <footer>
+        <hr>
+        <nav>
+            <a href="home_searchrides.html">Home</a> |
+            <a href="myrides.html">Rides</a> |
+            <a href="bookings.html">Bookings</a> |
+            <a href="home_configuration.html">Settings</a> |
+            <a href="index.html">Login</a> |
+            <a href="register.html">Register</a>
+        </nav>
+        <p>&copy; Aventones.com</p>
+    </footer>
+</body>
+
+</html>
