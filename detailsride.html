@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,15 +74,16 @@
         <div class="field days">
             <label>Days</label>
             <div class="days-checkboxes">
-                <label><input type="checkbox" checked> Mon</label>
-                <label><input type="checkbox" checked> Tue</label>
-                <label><input type="checkbox" checked> Wed</label>
-                <label><input type="checkbox" checked> Thu</label>
-                <label><input type="checkbox" checked> Fri</label>
-                <label><input type="checkbox" checked> Sat</label>
-                <label><input type="checkbox" checked> Sun</label>
+                <label><input type="checkbox" name="days" value="Mon"> Mon</label>
+                <label><input type="checkbox" name="days" value="Tue"> Tue</label>
+                <label><input type="checkbox" name="days" value="Wed"> Wed</label>
+                <label><input type="checkbox" name="days" value="Thu"> Thu</label>
+                <label><input type="checkbox" name="days" value="Fri"> Fri</label>
+                <label><input type="checkbox" name="days" value="Sat"> Sat</label>
+                <label><input type="checkbox" name="days" value="Sun"> Sun</label>
             </div>
         </div>
+
 
         <!-- Time, available seats, and fee -->
         <div class="row">
@@ -124,9 +126,9 @@
 
         <!-- Action buttons -->
         <div class="buttons">
-            <a href="myrides.html" class="cancel-btn">Cancel</a>
-            <button type="submit" class="next-btn">Request</button>
+            <button type="button" class="cancel-btn" onclick="window.history.back()">Back</button>
         </div>
+
     </form>
 
     <!-- Footer with navigation links -->
@@ -142,6 +144,9 @@
         </nav>
         <p>&copy; Aventones.com</p>
     </footer>
+
+    <script src="./Scripts/myrides/detailsride.js"></script>
+
 </body>
 
 </html>

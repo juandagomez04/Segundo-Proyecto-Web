@@ -53,32 +53,12 @@
         <table class="bookings-table">
             <thead>
                 <tr>
-                    <th>User</th>
+                    <th>User / Driver</th>
                     <th>Ride</th>
-                    <th>Accept / Reject</th>
+                    <th id="col3">Accept / Reject</th>
                 </tr>
             </thead>
-            <tbody>
-                <!-- Booking 1 -->
-                <tr>
-                    <td>
-                        <img src="Images/avatar.png" alt="avatar" class="avatar">
-                        <strong>Juanito</strong>
-                    </td>
-                    <td>Ciudad Quesada - Naranjo</td>
-                    <td><a href="#">Accept</a> | <a href="#">Reject</a></td>
-                </tr>
-
-                <!-- Booking 2 -->
-                <tr>
-                    <td>
-                        <img src="Images/avatar.png" alt="avatar" class="avatar">
-                        <strong>Menganito</strong>
-                    </td>
-                    <td>Fortuna - San José</td>
-                    <td><a href="#">Accept</a> | <a href="#">Reject</a></td>
-                </tr>
-            </tbody>
+            <tbody id="bookingsBody"></tbody>
         </table>
     </div>
 
@@ -95,6 +75,9 @@
         </nav>
         <p>&copy; Aventones.com</p>
     </footer>
+
+    <script src="./Scripts/bookings/router.js"></script>
+
 </body>
 
 

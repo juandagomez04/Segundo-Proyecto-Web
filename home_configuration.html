@@ -18,7 +18,7 @@
     <!-- Navigation bar -->
     <div class="menu-container">
         <div class="menu">
-            
+
             <!-- Left navigation links -->
             <nav class="left-menu">
                 <a class="active" href="home_searchrides.html">Home</a>
@@ -51,7 +51,7 @@
     <h2>Configuration</h2>
 
     <!-- Configuration form: public name and bio -->
-    <form class="form" action="home_searchrides.html" method="get">
+    <form class="form">
 
         <!-- Public display name -->
         <div class="row">
@@ -69,8 +69,8 @@
 
         <!-- Action buttons -->
         <div class="form-actions">
-            <a href="home_searchrides.html" class="cancel-link">Cancel</a>
-            <button type="submit" class="submit-btn">Save</button>
+            <a class="cancel-link" onclick="window.history.back()">Cancel</a>
+            <button type="submit" class="submit-btn" onclick="window.history.back()">Save</button>
         </div>
     </form>
 
@@ -87,6 +87,9 @@
         </nav>
         <p>&copy; Aventones.com</p>
     </footer>
+
+    <script src="Scripts/home/settings.js"></script>
+
 </body>
 
 

@@ -3,6 +3,31 @@ function getCurrentUser() {
     catch { return null; }
 }
 
+// utils
+function getRides() {
+    try { return JSON.parse(localStorage.getItem("rides")) || []; }
+    catch { return []; }
+}
+function saveRides(rides) {
+    localStorage.setItem("rides", JSON.stringify(rides));
+}
+
+// inicializa rideIdCounter si no existe (migra desde datos viejos)
+(function initRideIdCounter() {
+    if (localStorage.getItem("rideIdCounter") == null) {
+        const rides = getRides();
+        const maxId = rides.reduce((m, r) => Math.max(m, Number(r.id) || 0), 0);
+        localStorage.setItem("rideIdCounter", String(maxId));
+    }
+})();
+
+function getNextRideId() {
+    let c = parseInt(localStorage.getItem("rideIdCounter") || "0", 10);
+    c += 1;
+    localStorage.setItem("rideIdCounter", String(c));
+    return c;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     // 1) Proteger la página: solo drivers pueden estar aquí
     const current = getCurrentUser();
@@ -21,8 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
 
         let rides = JSON.parse(localStorage.getItem("rides")) || [];
-        // id autoincremental (simple): último id + 1
-        const newId = rides.length ? (rides[rides.length - 1].id + 1) : 1;
+        
+        const newId = getNextRideId();
 
         const departure = document.getElementById("departure").value.trim();
         const arrival = document.getElementById("arrival").value.trim();

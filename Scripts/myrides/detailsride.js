@@ -12,13 +12,6 @@ function getParam(name) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    // (Opcional) proteger para conductores
-    const current = getCurrentUser();
-    if (!current || current.type !== "driver") {
-        alert("Acceso denegado. Solo conductores.");
-        location.href = "home_searchrides.html";
-        return;
-    }
 
     const id = Number(getParam("id"));
     const rides = getRides();
