@@ -117,7 +117,7 @@
                 state: formData.state,
                 city: formData.city,
                 phone: formData.phone,
-                bio: typeof list[i].bio === "string" ? list[i].bio : "" // conservar bio
+                bio: typeof list[i].bio === "string" ? list[i].bio : "" 
             };
             if (formData.password) updated.password = formData.password;
 

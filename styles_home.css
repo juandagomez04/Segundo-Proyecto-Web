@@ -441,7 +441,7 @@ select {
   width: 100%;
   max-width: 1000px;
   height: 420px;
-  margin: 20px auto 100px;   /* 100px de margen inferior para que no se monte en el footer */
+  margin: 20px auto 100px;   
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   position: relative;
@@ -460,7 +460,7 @@ footer {
   background: var(--color-white);
   padding: 10px 0;
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
-  z-index: 10;   /* siempre por encima del mapa */
+  z-index: 10; 
 }
 
 footer nav a {
@@ -606,7 +606,7 @@ footer nav a {
   footer {
     font-size: 11px;
     padding: 7px 0;
-    position: relative; /* evita que tape el formulario en móviles */
+    position: relative;
   }
 }
 

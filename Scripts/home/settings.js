@@ -22,7 +22,7 @@
         const cur = getCurrentUser();
 
         const newName = ($("#fname")?.value || "").trim();
-        const newBio = ($("#bio")?.value || "").trim(); // puede ser vacío
+        const newBio = ($("#bio")?.value || "").trim();
 
         if (!newName) { alert("El nombre público no puede ir vacío."); return; }
 

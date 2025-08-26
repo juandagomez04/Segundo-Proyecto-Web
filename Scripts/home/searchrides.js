@@ -94,7 +94,7 @@
         }
 
         // 4) Calcular los destinos posibles según el FROM actual
-        const selectedFrom = fromSel.value; // "" => All
+        const selectedFrom = fromSel.value;
         let possibleTos;
         if (selectedFrom) {
             // Solo destinos que existan para ese origen
@@ -229,7 +229,7 @@
 
     function rerender() {
         const all = getRides();
-        populateFiltersFromRides(all); // ← llena los selects con valores reales
+        populateFiltersFromRides(all);
         const rows = filterRides(all);
         render(rows);
         updateHeaderPreview();

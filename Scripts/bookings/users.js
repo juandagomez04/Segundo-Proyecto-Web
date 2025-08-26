@@ -38,7 +38,7 @@
 
     function init() {
         const current = getCurrentUser();
-        if (!current || current.type !== "user") return;     // no expulsar
+        if (!current || current.type !== "user") return;
         renderRows(myBookings(current.data.email));
     }
 

@@ -57,7 +57,7 @@
 
     function init() {
         const current = getCurrentUser();
-        if (!current || current.type !== "driver") return;   // no expulsar
+        if (!current || current.type !== "driver") return;
         const mine = myPendingBookings(current.data.email);
         renderRows(mine);
         attachActions(current.data.email);
